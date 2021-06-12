@@ -1,0 +1,41 @@
+//*------------------*
+//*  base 基本
+//*------------------*
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%;
+}
+
+// body {
+//   font-family: $font-main;
+//   color: $color-black;
+//   background-color: $color-white;
+// }
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+// 横幅と中央寄せ
+.container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+

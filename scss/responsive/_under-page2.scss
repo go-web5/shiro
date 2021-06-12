@@ -1,0 +1,72 @@
+@include md {
+  .spa {
+    padding-top: 60px;
+    &__top {
+      height: 350px;
+    }
+  }
+
+  .spa-type {
+    padding-bottom: 82px;
+    
+    &__inner {
+      max-width: 100%;
+      padding: 0;
+    }
+  }
+
+
+  .spa-1 {
+    &__container {
+      padding-top: 42%;
+    }
+    &__image {
+      max-width: 100%;
+      width: 100%;
+      padding: 0 10%;
+    }
+    &__content {
+      max-width: 100%;
+      height: 58%;
+      margin: 0;
+      padding: 10.4% 0 53px;
+
+      &-inner {
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .spa-2 {
+    &__container {
+      padding-top: 42%;
+    }
+    &__image {
+      max-width: 100%;
+      width: 100%;
+      padding: 0 10%;
+    }
+    &__content {
+      max-width: 100%;
+      height: 58%;
+      margin: 0;
+      padding: 10.4% 0 53px;
+
+      &-inner {
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+@include sm {
+  .spa-detail {
+    &__box {
+      max-width: 90%;
+    }
+  }
+}
+
+

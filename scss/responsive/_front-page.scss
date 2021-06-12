@@ -1,0 +1,310 @@
+//*------------------*
+//*  改行メディアクエリ
+//*------------------*
+
+@media screen and (min-width: 992px){
+  .br-sp { display: block; }
+}
+
+@media screen and (max-width: 992px){
+  // .br-tablet { display:none; }
+  .br-sp { display:none; }
+}
+
+//*------------------*
+//*  トップ
+//*------------------*
+@include md {
+  .top {
+    height: 100vh;
+    img {
+      height: 100vh;
+    }
+    &__copy {
+      
+        // top: 33%;
+        right: 15%;
+        line-height: 2;
+      
+    }
+  }
+}
+
+@include sm {
+  .top__copy {
+    right: 18%;
+    line-height: 1.7;
+    @include rem(28);
+  }
+}
+
+//*------------------*
+//*  コンセプト（縦書きメッセージ）
+//*------------------*
+
+.concept {
+  @include lg {
+    height: auto;
+    background-size: cover;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  &__inner {
+    @include xxl {
+      padding-left: 3%;
+    }
+    @include lg {
+      -ms-writing-mode: lr-tb;
+      -webkit-writing-mode: horizontal-tb;
+      writing-mode: horizontal-tb;
+      padding: 0 3% 0 3%;
+      box-sizing: border-box;
+      height: auto;
+      text-align: center;
+      max-width: 92%;
+    }
+  }
+
+  &__ttl {
+    @include lg {
+      text-indent: 0em;
+    }
+    @include sm {
+      @include rem(24);
+    }
+  }
+
+  p {
+    @include xl {
+      margin-right: 80px;
+    }
+    @include lg {
+      margin-right: 0px;
+      margin-top: 40px;
+    }
+  }
+  &__sign {
+    @include lg {
+      text-align: center;
+      padding-bottom: 0em;
+    }
+  }
+}
+
+//*------------------*
+//*  詳細
+//*------------------*
+.detail {
+  &__item-1,
+  &__item-2,
+  &__item-3 {
+    @include xxl {
+      align-items: center;
+    }
+    @include lg {
+      flex-direction: column;
+    }
+  }
+  &__item-1,
+  &__item-2 {
+    @include lg {
+      margin-bottom: 78px;
+    }
+  }
+  &__box {
+    @include lg {
+      padding: 22px 4% 0 4%;
+      width: 100%;
+    }
+  }
+  &__item-2 {
+    & > .detail__box {
+      @include lg {
+        padding: 22px 4% 0 4%;
+
+      }
+    }
+  }
+  &__ttl {
+    @include xl {
+      @include rem(32);
+    }
+    @include lg {
+      width: 100%;
+    }
+    @include sm {
+      @include rem(24);
+    }
+  }
+  &__text {
+    @include lg {
+      width: 100%;
+    }
+  }
+  &__btn > a {
+    @include lg {
+      margin: 0 auto;
+    }
+  }
+}
+
+//*------------------*
+//*  おすすめご宿泊プラン
+//*------------------*
+.plan {
+  &__inner {
+    @include xl {
+      flex-direction: column;
+      align-items: center;
+      max-width: 600px;
+      padding: 0 3%;
+    }
+  }
+  &__heading h2 {
+    @include sm {
+      @include rem(30);
+    }
+  }
+
+  &__item-box {
+    @include xl {
+      max-width: 100%;
+      margin-bottom: 80px;
+
+    }
+
+    img {
+      @include xl {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__item-box:last-of-type {
+    @include lg {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item-box:not(:last-of-type) {
+    @include xl {
+      margin-right: 0;
+    }
+  }
+}
+
+//*------------------*
+//*  お知らせ
+//*------------------*
+.news {
+  &__inner {
+    @include lg {
+      flex-direction: column;
+      align-items: center;
+      box-sizing: border-box;
+      padding: 0 4%;
+    }
+  }
+  &__ttl {
+    @include sm {
+      @include rem(30);
+    }
+  }
+  article {
+    @include lg {
+      width: 100%;
+      max-width: 600px;
+    }
+    a {
+      @include sm {
+        padding: 15px 10px 15px;
+      }
+    }
+  }
+  article:nth-child(odd) {
+    @include lg {
+      margin-right: 0;
+    }
+  }
+  time {
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+  &__item-ttl {
+    @include sm {
+      line-height: 1.3;
+    }
+  }
+}
+
+//*------------------*
+//*  アクセス
+//*------------------*
+.access {
+  &__inner {
+    @include xxl {
+      align-items: center;
+      padding-left: 3%;
+    }
+    @include lg {
+      flex-direction: column;
+      padding: 0 3%;
+    }
+  }
+  &__heading h2 {
+    @include sm {
+      @include rem(30);
+    }
+  }
+
+  &__text {
+    @include xxl {
+      padding-left: 50px;
+    }
+    @include lg {
+      padding-top: 30px;
+      padding-left: 0px;
+    }
+  }
+
+  &__map {
+    @include lg {
+      padding: 0 3%;
+    }
+
+    iframe {
+      @include lg {
+        max-width: 656px;
+        height: 400px;
+        width: 100%;
+      }
+      @include sm {
+        height: 300px;
+      }
+    }
+  }
+}
+
+//*------------------*
+//*  予約モーダル
+//*------------------*
+
+@include sm {
+  .modal__form-inner label{
+    margin-bottom: 8px;
+  }
+
+  .modalWrapper {
+    min-height: 480px;
+  }
+  .modal-ttl {
+    margin-bottom: 15px;
+  }
+  .modalContents {
+    padding-top: 15px;
+  }
+  .modal__form-time {
+    margin-bottom: 30px;
+  }
+}
